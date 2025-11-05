@@ -29,12 +29,12 @@ const Home = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [productToDelete, setProductToDelete] = useState(null);
 
-  // ✅ Fetch Products
+  // Fetch Products
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const data = await getAllProducts();
-        setTimeout(() => setProducts(data), 800); // Small delay for smoother skeleton display
+        setTimeout(() => setProducts(data), 800); 
       } catch (error) {
         toast.error("Failed to fetch products ❌");
         console.error("Error fetching products:", error);
@@ -45,7 +45,7 @@ const Home = () => {
     fetchProducts();
   }, []);
 
-  // ✅ Filtered Products
+  // Filtered Products
   const filteredProducts = products.filter((product) => {
     const matchesCategory = selected === "all" || product.category === selected;
     const matchesSearch = product.title
@@ -54,6 +54,7 @@ const Home = () => {
     return matchesCategory && matchesSearch;
   });
 
+  // Delete Products
   const confirmDelete = (product) => {
     setProductToDelete(product);
     setShowDeleteModal(true);
@@ -73,6 +74,7 @@ const Home = () => {
     }
   };
 
+  // Add & Edit Products
   const handleSave = async (data) => {
     try {
       if (!data.title || !data.price || !data.category || !data.description) {
@@ -266,6 +268,8 @@ const Home = () => {
           )}
         </main>
       </div>
+
+      {/* Modal */}
 
       {showModal && (
         <ProductsForm

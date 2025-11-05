@@ -1,6 +1,6 @@
  import { toast } from "react-toastify";
 
-// ✅ Success (Add / Create)
+// Success (Add / Create)
 export const successToast = (msg) => {
   toast.success(msg, {
     className:
@@ -10,7 +10,7 @@ export const successToast = (msg) => {
   });
 };
 
-// 🟦 Info (Update / Edit)
+// Info (Update / Edit)
 export const infoToast = (msg) => {
   toast.info(msg, {
     className:
@@ -20,7 +20,7 @@ export const infoToast = (msg) => {
   });
 };
 
-// 🟥 Delete
+// Delete
 export const deleteToast = (msg) => {
   toast.warn(msg, {
     className:
@@ -31,7 +31,7 @@ export const deleteToast = (msg) => {
   });
 };
 
-// ⚠️ Error
+// Error
 export const errorToast = (msg) => {
   toast.error(msg, {
     className:

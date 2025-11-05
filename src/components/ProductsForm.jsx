@@ -17,14 +17,14 @@ const ProductsForm = ({ onClose, onSave, initialData }) => {
   const [isVisible, setIsVisible] = useState(false);
   const modalRef = useRef();
 
-  // ✅ Fetch categories
+  // Fetch categories
   useEffect(() => {
     const fetchCategories = async () => {
       try {
         const res = await axios.get("https://fakestoreapi.com/products/categories");
         setCategories(res.data);
       } catch (error) {
-        toast.error("Failed to load categories ❌");
+        toast.error("Failed to load categories");
       }
     };
     fetchCategories();
@@ -52,7 +52,7 @@ const ProductsForm = ({ onClose, onSave, initialData }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.title || !formData.price || !formData.category) {
-      toast.warning("Please complete all fields ⚠️");
+      toast.warning("Please complete all fields");
       return;
     }
     onSave(formData);
