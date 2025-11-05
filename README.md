@@ -48,7 +48,7 @@ Endpoints:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/<your-username>/react-product-dashboard.git
+   https://github.com/jeyaramP/react-product-management-dashboard.git
 
 2. Navigate to the project folder:
    
