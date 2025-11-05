@@ -1,18 +1,74 @@
-# React + Vite
+# React Product Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **React.js Product Management Dashboard** built using the [FakeStore API](https://fakestoreapi.com/products).  
+This project demonstrates CRUD operations (Create, Read, Update, Delete), API handling, and responsive UI design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Fetch and display product data using **Axios**
+- Add new products (mocked using FakeStore API)
+- Edit existing products using PUT request
+- Delete products using DELETE request
+- Search and filter products by title or category
+- Responsive UI with modern layout
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+##  Tech Stack
 
-## Expanding the ESLint configuration
+- **React.js (Functional Components & Hooks)**
+- **Vite**
+- **Axios** for API integration
+- **Tailwind CSS** for styling
+- **Skeleton** for loading
+- **FakeStore API** for mock data
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+##  API Reference
+
+Base URL:
+
+ https://fakestoreapi.com/products
+
+
+Endpoints:
+- `GET /products` → Fetch all products  
+- `POST /products` → Add a new product  
+- `PUT /products/:id` → Update a product  
+- `DELETE /products/:id` → Delete a product  
+- `GET /products/category/{category}` → Filter by category  
+
+---
+
+## ⚙️ Installation & Setup
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/<your-username>/react-product-dashboard.git
+
+2. Navigate to the project folder:
+   
+   ```bash
+   cd react-product-management-dashboard
+
+3. Install dependencies:
+   
+   ```bash
+   npm install
+
+4. Start the app:
+   
+   ```bash
+   npm run dev
+
+---
+
+## Live Demo
+
+ https://react-product-management-jeyaram.vercel.app/
+
+---
